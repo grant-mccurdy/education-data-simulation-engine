@@ -17,7 +17,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: pip
       - run: make all
       - name: Verify deterministic synthetic source artifacts
         run: git diff --exit-code -- data/synthetic
