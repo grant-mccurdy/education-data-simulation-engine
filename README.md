@@ -1,6 +1,12 @@
 # Synthetic Education Data
 
+[![Quality](https://github.com/grant-mccurdy/education-data-simulation-engine/actions/workflows/quality.yml/badge.svg)](https://github.com/grant-mccurdy/education-data-simulation-engine/actions/workflows/quality.yml)
+
 A privacy-preserving synthetic education data engine that simulates a high-school math department for assessment analytics, dashboard development, and learning-systems prototyping.
+
+**[Explore the data in the Portfolio Data Lab](https://grant-mccurdy.github.io/data-lab.html)** | **[Read the project brief](https://grant-mccurdy.github.io/projects/education-data-simulation-engine.html)** | **[Open the downstream dashboard](https://grant-mccurdy.github.io/dashboard/assessment.html)**
+
+![Portfolio Data Lab over the public-safe synthetic warehouse](docs/images/data-lab.png)
 
 This repository demonstrates education analytics infrastructure without publishing protected student data, raw LMS exports, real gradebooks, teacher names, section labels, or school-private records.
 
@@ -210,3 +216,11 @@ It generates academic years 2025-2026 through 2031-2032 with:
 - DuckDB mart exports for assessment facts, LMS enrollment facts, readiness, growth, missingness, and roster reconciliation
 
 For a more analysis-facing view of the same synthetic data ecosystem, see the downstream `assessment-intelligence` project.
+
+## Licensing
+
+- Code is available under the [MIT License](LICENSE).
+- Original documentation and generated visual content are available under [CC BY 4.0](LICENSE-CONTENT.md).
+- Original synthetic datasets are available under [CC BY 4.0](LICENSE-DATA.md).
+
+Third-party materials, trademarks, personal likenesses, and acquired source material are excluded unless explicitly stated otherwise.
