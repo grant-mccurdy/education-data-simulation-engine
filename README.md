@@ -4,7 +4,25 @@
 
 A privacy-preserving synthetic education data engine that simulates a high-school math department for assessment analytics, dashboard development, and learning-systems prototyping.
 
-**[Explore the data in the Portfolio Data Lab](https://grant-mccurdy.github.io/data-lab.html)** | **[Read the project brief](https://grant-mccurdy.github.io/projects/education-data-simulation-engine.html)** | **[Open the downstream dashboard](https://grant-mccurdy.github.io/dashboard/assessment.html)**
+**[Inspect the validation results](data/marts/validation_summary.csv)** | **[Open the longitudinal dashboard](https://grant-mccurdy.github.io/dashboard/longitudinal.html)** | **[Read the project brief](https://grant-mccurdy.github.io/projects/education-data-simulation-engine.html)**
+
+## Review the evidence
+
+The local Python/SQL path reconciles 2,009 roster rows and models 4,018
+assessment records. A clean rebuild on 19 October 2026 from public commit
+`2ecdb77` passed all 20 warehouse checks and regenerated the synthetic source
+artifacts without changes. Checks cover unique enrollments, score bounds,
+LMS extraction counts, and source-to-roster reconciliation.
+
+Run `make all` and `make warehouse` after installing the documented DuckDB
+dependency to reproduce the checks. The optional Supabase path was checked in
+dry-run mode only; this verification does not establish a hosted deployment.
+
+The separate [Portfolio Data Lab](https://grant-mccurdy.github.io/data-lab.html)
+offers an AI-assisted exploration interface over the synthetic warehouse.
+It is optional; the source, validation tables, and local rebuild do not depend
+on a live AI service. The [Logos single-administration dashboard](https://grant-mccurdy.github.io/dashboard/assessment.html)
+uses a different synthetic reporting dataset.
 
 ![Portfolio Data Lab over the public-safe synthetic warehouse](docs/images/data-lab.png)
 
